@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <base href="/">
+        <meta charset="UTF-8"/>
+        <meta property="og:title" content="SuperBolter: Free 3D Home Design Software | Online Interior Design Tool"/>
+        <meta name="description" content="Discover the freedom of 3D home design with SuperBolter. Design your dream home, explore furniture from real brands and get live estimates. Start designing for free!">
+        <meta name="msapplication-TileImage" content="//sbcdn1.superbolter.com//rome/assets/landing/superbolter-preview-medium.png">
+        <meta property="og:image:secure_url" content="//sbcdn1.superbolter.com//rome/assets/landing/superbolter-preview-medium.png"/>
+        <meta property="og:locale" content="en_GB"/>
+        <meta property="og:description" content="SuperBolter is an online platform that helps anyone convert their floorplan into 3D home using AI."/>
+        <meta property="og:image" itemprop="image" content="//sbcdn1.superbolter.com//rome/assets/landing/superbolter-preview-medium.png"/>
+        <meta property="og:image:width" content="300">
+        <meta property="og:image:height" content="200">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:type" content="website"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <script src="Integration/CanvasWrapper.js"></script>
+        <link rel="shortcut icon" href="/favicon.ico"/>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" async>
+        <link rel="stylesheet" href="https://rome4.getsuperbolt.com/external_assets/fontawesome_all.css"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"/>
+        <meta name="theme-color" content="#000000"/>
+        <link rel="manifest" href="/manifest.json"/>
+        <title>SuperBolter: Free 3D Home Design Software | Online Interior Design Tool</title>
+        <meta charset="UTF-8"/>
+        <style>
+            #main-site {
+                background-color: #fff
+            }
+
+            @media (min-width: 1200px) {
+                .container {
+                    width:650px
+                }
+
+                #header .container {
+                    width: 1200px
+                }
+
+                .footer .container {
+                    width: 1200px
+                }
+            }
+
+            #viewer {
+                width: 100vw;
+                height: 100vh
+            }
+        </style>
+        <link href="/static/css/15.bbd7e5a5.chunk.css" rel="stylesheet">
+        <link href="/static/css/main.8e9241b8.chunk.css" rel="stylesheet">
+    </head>
+    <div id="modal"></div>
+    <body id="index" onclick="closedropdown()" onkeydown="escKey(event)" style="font-size:16px">
+        <main id="main-site" class="displayhomenovtwo"></main>
+        <script>
+            function GAEvent(n, i, e, o, t="") {
+                window.FBPixel(n, i, e, o),
+                window.GTMEVENT(n, i, e, o, t)
+            }
+            function GAPageView(n) {}
+            function GATiming(n, i, e) {}
+            function GAUpdateExperiment(n) {}
+            function bool(n) {
+                return "false" !== n && "null" !== n && "NaN" !== n && "undefined" !== n && "0" !== n && !!n
+            }
+        </script>
+        <script type="text/javascript">
+            // if ("SBP" == 'SBP') {
+            //   !function (f, b, e, v, n, t, s) {
+            //     if (f.fbq) return; n = f.fbq = function () {
+            //       n.callMethod ?
+            //         n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            //     };
+            //     if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            //     n.queue = []; t = b.createElement(e); t.async = !0;
+            //     t.src = v; s = b.getElementsByTagName(e)[0];
+            //     s.parentNode.insertBefore(t, s)
+            //   }(window, document, 'script',
+            //     'https://connect.facebook.net/en_US/fbevents.js');
+            //   // CCD:ADD PIXEL ID HERE
+            //   fbq('init', '466098154553622');
+            //   fbq('track', 'PageView');
+            // }
+
+            (function(w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    'gtm.start': new Date().getTime(),
+                    event: 'gtm.js'
+                });
+                var f = d.getElementsByTagName(s)[0]
+                  , j = d.createElement(s)
+                  , dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            }
+            )(window, document, 'script', 'dataLayer', 'GTM-PQJLB45')
+
+            function FBPixel(eventCategory, eventAction, eventLabel, eventValue) {
+                if (typeof fbq === "function") {
+                    fbq('trackCustom', eventCategory, {
+                        "eventAction": eventAction,
+                        "eventLabel": eventLabel,
+                        "eventValue": eventValue
+
+                    });
+                }
+
+            }
+
+            function extractDomain(pathname) {
+                const parts = pathname.split('.');
+                return parts[0];
+            }
+            ;
+            function GTMEVENT(eventCategory, eventAction, eventLabel, eventValue, extraparams="") {
+                window.dataLayer = window.dataLayer || [];
+                let flag = 0;
+                const domain = extractDomain(window.location.hostname);
+                const source = 'ROME';
+                const envDomains = ''.split(',').map(domain=>domain.trim());
+                const user_id = window?.curentUserSession?.user_id ? window?.curentUserSession?.user_id : "";
+                if (!envDomains.includes(domain)) {
+                    flag = 1;
+                }
+                dataLayer.push({
+                    'event': 'customEvent',
+                    'eventCategory': eventCategory,
+                    'eventAction': eventAction,
+                    'eventLabel': eventLabel,
+                    'eventValue': eventValue,
+                    "extraParams": extraparams,
+                    "user_id": user_id,
+                    "source": source,
+                    ...(flag === 1 ? {
+                        'merchantName': domain
+                    } : {})
+                });
+            }
+        </script>
+        <script defer="defer" src="https://tally.so/widgets/embed.js"></script>
+        <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQJLB45" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <script>
+            !function(e) {
+                function r(r) {
+                    for (var a, c, u = r[0], i = r[1], l = r[2], s = 0, p = []; s < u.length; s++)
+                        c = u[s],
+                        Object.prototype.hasOwnProperty.call(n, c) && n[c] && p.push(n[c][0]),
+                        n[c] = 0;
+                    for (a in i)
+                        Object.prototype.hasOwnProperty.call(i, a) && (e[a] = i[a]);
+                    for (f && f(r); p.length; )
+                        p.shift()();
+                    return o.push.apply(o, l || []),
+                    t()
+                }
+                function t() {
+                    for (var e, r = 0; r < o.length; r++) {
+                        for (var t = o[r], a = !0, u = 1; u < t.length; u++) {
+                            var i = t[u];
+                            0 !== n[i] && (a = !1)
+                        }
+                        a && (o.splice(r--, 1),
+                        e = c(c.s = t[0]))
+                    }
+                    return e
+                }
+                var a = {}
+                  , n = {
+                    14: 0
+                }
+                  , o = [];
+                function c(r) {
+                    if (a[r])
+                        return a[r].exports;
+                    var t = a[r] = {
+                        i: r,
+                        l: !1,
+                        exports: {}
+                    };
+                    return e[r].call(t.exports, t, t.exports, c),
+                    t.l = !0,
+                    t.exports
+                }
+                c.e = function(e) {
+                    var r = []
+                      , t = n[e];
+                    if (0 !== t)
+                        if (t)
+                            r.push(t[2]);
+                        else {
+                            var a = new Promise((function(r, a) {
+                                t = n[e] = [r, a]
+                            }
+                            ));
+                            r.push(t[2] = a);
+                            var o, u = document.createElement("script");
+                            u.charset = "utf-8",
+                            u.timeout = 120,
+                            c.nc && u.setAttribute("nonce", c.nc),
+                            u.src = function(e) {
+                                return c.p + "static/js/" + ({
+                                    1: "reactPlayerDailyMotion",
+                                    2: "reactPlayerFacebook",
+                                    3: "reactPlayerFilePlayer",
+                                    4: "reactPlayerKaltura",
+                                    5: "reactPlayerMixcloud",
+                                    6: "reactPlayerPreview",
+                                    7: "reactPlayerSoundCloud",
+                                    8: "reactPlayerStreamable",
+                                    9: "reactPlayerTwitch",
+                                    10: "reactPlayerVidyard",
+                                    11: "reactPlayerVimeo",
+                                    12: "reactPlayerWistia",
+                                    13: "reactPlayerYouTube"
+                                }[e] || e) + "." + {
+                                    1: "64bd071a",
+                                    2: "0faab65c",
+                                    3: "59c1019e",
+                                    4: "18b7c4c1",
+                                    5: "8f8e5249",
+                                    6: "a554cfcb",
+                                    7: "9a48e9d3",
+                                    8: "e4548960",
+                                    9: "0556f8f3",
+                                    10: "2f091a2a",
+                                    11: "228bb366",
+                                    12: "a076683d",
+                                    13: "cd9a2c8b"
+                                }[e] + ".chunk.js"
+                            }(e);
+                            var i = new Error;
+                            o = function(r) {
+                                u.onerror = u.onload = null,
+                                clearTimeout(l);
+                                var t = n[e];
+                                if (0 !== t) {
+                                    if (t) {
+                                        var a = r && ("load" === r.type ? "missing" : r.type)
+                                          , o = r && r.target && r.target.src;
+                                        i.message = "Loading chunk " + e + " failed.\n(" + a + ": " + o + ")",
+                                        i.name = "ChunkLoadError",
+                                        i.type = a,
+                                        i.request = o,
+                                        t[1](i)
+                                    }
+                                    n[e] = void 0
+                                }
+                            }
+                            ;
+                            var l = setTimeout((function() {
+                                o({
+                                    type: "timeout",
+                                    target: u
+                                })
+                            }
+                            ), 12e4);
+                            u.onerror = u.onload = o,
+                            document.head.appendChild(u)
+                        }
+                    return Promise.all(r)
+                }
+                ,
+                c.m = e,
+                c.c = a,
+                c.d = function(e, r, t) {
+                    c.o(e, r) || Object.defineProperty(e, r, {
+                        enumerable: !0,
+                        get: t
+                    })
+                }
+                ,
+                c.r = function(e) {
+                    "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
+                        value: "Module"
+                    }),
+                    Object.defineProperty(e, "__esModule", {
+                        value: !0
+                    })
+                }
+                ,
+                c.t = function(e, r) {
+                    if (1 & r && (e = c(e)),
+                    8 & r)
+                        return e;
+                    if (4 & r && "object" == typeof e && e && e.__esModule)
+                        return e;
+                    var t = Object.create(null);
+                    if (c.r(t),
+                    Object.defineProperty(t, "default", {
+                        enumerable: !0,
+                        value: e
+                    }),
+                    2 & r && "string" != typeof e)
+                        for (var a in e)
+                            c.d(t, a, function(r) {
+                                return e[r]
+                            }
+                            .bind(null, a));
+                    return t
+                }
+                ,
+                c.n = function(e) {
+                    var r = e && e.__esModule ? function() {
+                        return e.default
+                    }
+                    : function() {
+                        return e
+                    }
+                    ;
+                    return c.d(r, "a", r),
+                    r
+                }
+                ,
+                c.o = function(e, r) {
+                    return Object.prototype.hasOwnProperty.call(e, r)
+                }
+                ,
+                c.p = "/",
+                c.oe = function(e) {
+                    throw console.error(e),
+                    e
+                }
+                ;
+                var u = this.webpackJsonpsbreact = this.webpackJsonpsbreact || []
+                  , i = u.push.bind(u);
+                u.push = r,
+                u = u.slice();
+                for (var l = 0; l < u.length; l++)
+                    r(u[l]);
+                var f = i;
+                t()
+            }([])
+        </script>
+        <script src="/static/js/15.9fadd997.chunk.js"></script>
+        <script src="/static/js/main.f5a99d25.chunk.js"></script>
+    </body>
+</html>
